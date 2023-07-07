@@ -5,7 +5,7 @@ This is a simple password generator project that generates a secure password for
 
 
 ## Live Demo
-[Password Generator](https://nategreeff.github.io/Password-Generator/))
+[Password Generator](https://nategreeff.github.io/Password-Generator/)
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
