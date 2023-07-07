@@ -50,5 +50,30 @@ function generatePassword() {
   var numbersArray = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
   var specialCharactersArray = ["!", "@", "#", "$", "%", "^", "&", "*"];
   var combinedCharacterArray = [];
-  var randomCharacterArray = [];
+  var randomizedCharacterArray = [];
+  
+  //Concatenate array characters
+  if (lowerCase) {
+    combinedCharacterArray = combinedCharacterArray.concat(lowerCaseArray);
+  }
+  if (upperCase) {
+    combinedCharacterArray = combinedCharacterArray.concat(upperCaseArray);
+  }
+  if (numbers) {
+    combinedCharacterArray = combinedCharacterArray.concat(numbersArray);
+  }
+  if (specialCharacters) {
+    combinedCharacterArray = combinedCharacterArray.concat(specialCharactersArray);
+  }
+
+  //Randomize array characters
+  for (var i = 0; i < passwordLength; i++) {
+    var randomIndex = Math.floor(Math.random() * combinedCharacterArray.length);
+    var randomCharacter = combinedCharacterArray[randomIndex];
+    randomizedCharacterArray.push(randomCharacter)
+  }
+
+  //Join and return password
+  var password = randomizedCharacterArray.join("");
+  return password;
 };
